@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "restaurant-reviews"
+version = "0.1.0"
+description = "근처 식당 추천"
+authors = ["Taehun Kim <taehun@teamsnowball.com>"]
+license = "커피한잔"
+readme = "README.md"
+packages = [{ include = "restaurant_reviews" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.27.2"
+watchdog = "^3.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
