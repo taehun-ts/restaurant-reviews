@@ -6,7 +6,7 @@ import streamlit as st
 """
 # 안양 사무실 주변 식당 리얼 후기
 """
-df = pd.read_csv("restaurant.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/taehun-ts/restaurant-reviews/main/restaurant.csv")
 colors = np.random.rand(len(df), 3).tolist()
 colors = list(
     map(
@@ -59,4 +59,4 @@ st.pydeck_chart(
     )
 )
 
-st.dataframe(df.style.applymap(color_restaurant, subset=["color"]))
+st.dataframe(df.style.map(color_restaurant, subset=["color"]))
